@@ -15,6 +15,14 @@
             }
             return sum;
         }
+        let n = +prompt("Nhập số phần tử của trong mảng")
+        let numbers = [];
+        for(let i = 1; i <= n; i++){
+            let b = +prompt(`Nhập phần tử thứ ${i} vào mảng:`)
+            numbers.push(b)
+        }
+        let tbCong = sumArr(numbers)/numbers.length
+        alert(`giá trị trung bình các chữ số trong mảng vừa nhập là: ${tbCong}`)
     </script>
 </body>
 </html>
