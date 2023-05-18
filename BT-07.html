@@ -8,7 +8,52 @@
 </head>
 <body>
     <script>
-        
+        let number = +prompt("Vui long nhập số bạn muốn kiểm tra:")
+        function sumArr(arr){
+            let sum = 0;
+            for (let i=0; i<arr.length;i++){
+                sum += arr[i]
+            }
+            return sum;
+        }
+        function ktSoNT(a){
+            let check = true;
+            for(let i = 2; i < a; i++){
+                if(a % i == 0){
+                    check = false;
+                }
+            }
+            return check;
+        }
+        function ktSo(a){
+            if(a == 1 ){
+                alert(`số ${a} là số lẻ và là số nguyên tố`);
+            }
+            if(a == 2 ){
+                alert(`số ${a} là số chẵn và là số nguyên tố`);
+            }
+            if(a % 2 == 0 && a!=2){
+                let numbers = [1];
+                for(let i = 2; i < a; i++){
+                    if(a % i == 0){
+                        numbers.push(i);
+                    }
+                }
+                console.log(numbers);
+                if(sumArr(numbers) == a){
+                    alert(`số ${a} là số chẵn và là số hoàn hảo`);
+                }else{
+                    alert(`số ${a} là số chẵn bình thường`);
+                }
+            }else{
+                if(ktSoNT(a)){
+                    alert(`số ${a} là số lẻ và là số nguyên tố`);
+                }else{
+                    alert(`số ${a} là số lẻ và không phải là số nguyên tố`);
+                }
+            }
+        }
+        ktSo(number)
     </script>
 </body>
 </html>
